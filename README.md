@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+// A ui for a tracking shipment website with fetching data from the api and display it in the header
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
