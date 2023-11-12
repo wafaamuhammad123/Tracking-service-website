@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from "react";
+import Api from "../api data/api";
+import axios from 'axios';
+
 import './header.css';
 const Header = () => {
-  return <header>
+    const [trackingNumber, setTrackingNumber] = useState("");
+    const [headerData, setHeaderData] = useState(null);
+
+    const handleDataUpdate = (data) => {
+        setHeaderData(data);
+    };
+
+    const handleTrackingNumberChange = (e) => {
+        setTrackingNumber(e.target.value);
+    };
+
+    const handleFetchData = async () => {
+        try {
+            const response = await axios.get(`https://tracking.bosta.co/shipments/track/${trackingNumber}`);
+            const responseData = response.data;
+            setHeaderData(responseData);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+  return (
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
  
@@ -55,15 +79,33 @@ const Header = () => {
    
       </ul>
      
-
-      <div class="d-flex align-items-center">
-      <div class="dropdown-container4">
-    <span>Track shipment</span>
-    <div class="dropdown-content">
-      <a href="#" class="dropdown-option">Option 1</a>
-      <a href="#" class="dropdown-option">Option 2</a>
-    </div>
-  </div>
+      <div className="d-flex align-items-center">
+      <div className="dropdown-container4">
+                <span>Track shipment</span>
+                <div className="dropdown-content" style={{ padding: '23px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+                    <p>track your shipment</p>
+                    <input
+                        type="text"
+                        placeholder="Enter Tracking Number"
+                        value={trackingNumber}
+                        onChange={handleTrackingNumberChange}
+                    />
+                    <button className="tracking-button" onClick={handleFetchData}>
+                        Fetch Data
+                    </button>
+                    {/* Render headerData in the desired way */}
+                    {headerData && (
+                        <ul className="tracking-details">
+                            <li>Tracking Number: {headerData.TrackingNumber}</li>
+                            <li>Provider: {headerData.provider}</li>
+                            <li>Current Status: {headerData.CurrentStatus.state}</li>
+                            <li>Promised Date: {headerData.PromisedDate}</li>
+                            <li>Tracking URL: {headerData.TrackingURL}</li>
+                            {/* Render more properties here */}
+                        </ul>
+                    )}
+                </div>
+            </div>
 
 
      <div class="dropdown-container5">
@@ -89,10 +131,10 @@ const Header = () => {
  
 </nav>
 
-  </header>;
 
 
 
+  )
 };
 
 export default Header;

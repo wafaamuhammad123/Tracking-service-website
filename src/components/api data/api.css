@@ -1,0 +1,35 @@
+.data{
+
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.tracking-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   
+  }
+  
+  .tracking-details {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tracking-details li {
+    margin-bottom: 10px;
+  }
+
+.tracking-button:hover{
+           background-color: white;
+           border: 2px solid  #4CAF50;
+           color:  #4CAF50;
+    }
+      

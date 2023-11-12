@@ -7,7 +7,7 @@ const Footer = () => {
   return <footer>
 
 
-<footer class="footer_area section_padding_130_0">
+<footer class="footer_area section_padding_130_0" style={{  backgroundColor:'rgb(212, 230, 234)', marginTop:'5%'}}>
       <div class="container3">
         <div class="row">
       

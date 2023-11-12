@@ -75,7 +75,7 @@
   .text-behind img{
     width: 150px;
     margin-left: 100px;
-    margin-top: 80px;
+    margin-top: 220px;
   }
 .text-behind p{
     font-size: 25px;
@@ -126,12 +126,10 @@
     width: 17%;
     margin-left: 10%;
   }
-  
-
-
 /* CSS */
 .button-43 {
   background-image: linear-gradient(-180deg, #97240a 0%, #c8211e 100%);
+  margin-left: 12%;
   border-radius: .5rem;
   box-sizing: border-box;
   color: #FFFFFF;

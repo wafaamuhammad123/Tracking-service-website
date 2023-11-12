@@ -11,6 +11,7 @@ body{margin-top:20px;}
     margin-left: -25px;
     margin-right: -25px;
 }
+
 .footer_area .row .col,
 .footer_area .row .col-1,
 .footer_area .row .col-10,
@@ -104,11 +105,14 @@ body{margin-top:20px;}
     color: #747794;
     margin-bottom: 1rem;
     display: block;
+    text-decoration: none;
     font-size: 1rem;
 }
+
+
 .single-footer-widget .footer_menu li a:hover,
 .single-footer-widget .footer_menu li a:focus {
-    color: #3f43fd;
+    color: black;
 }
 .single-footer-widget .footer_menu li:last-child a {
     margin-bottom: 0;
@@ -157,6 +161,7 @@ body{margin-top:20px;}
 }
 ol li, ul li {
     list-style: none;
+    
 }
 
 ol, ul {

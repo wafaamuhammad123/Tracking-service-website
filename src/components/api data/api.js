@@ -1,34 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './api.css';
 
-export default function Posta() {
+const Api = ({ onDataUpdate }) => {
+  const [trackingNumber, setTrackingNumber] = useState("");
   const [data, setData] = useState(null);
 
-  async function fetchData(trackingNumber) {
+  async function fetchData() {
     try {
       const response = await axios.get(`https://tracking.bosta.co/shipments/track/${trackingNumber}`);
-      const data = response.data;
+      const responseData = response.data;
 
-      // Use the data to update your component's state or perform any necessary operations
-      console.log(data); // Display the data in the console for now
-      setData(data); // Update the state with the fetched data
+      console.log(responseData);
+      setData(responseData);
+
+      // Pass the data to the parent component
+      onDataUpdate(responseData);
     } catch (error) {
       console.error(error);
     }
   }
 
   useEffect(() => {
-    // fetchData('7234258'); // Remove this line since we don't want to fetch data for a specific tracking number initially
-  }, []);
+    // Uncomment the line below if you want to fetch data for a specific tracking number initially
+    // fetchData();
+  }, [trackingNumber]); // Include trackingNumber in the dependency array to fetch data when it changes
 
   return (
-    <div>
-      <button onClick={() => fetchData('7234258')}>Tracking Number 1</button>
-      <button onClick={() => fetchData('13737343')}>Tracking Number 2</button>
-      <button onClick={() => fetchData('67151313')}>Tracking Number 3</button>
+    <div className="data">
+   
 
       {data && (
-        <ul>
+        <ul className="tracking-details">
           <li>Tracking Number: {data.TrackingNumber}</li>
           <li>Provider: {data.provider}</li>
           <li>Current Status: {data.CurrentStatus.state}</li>
@@ -39,4 +42,6 @@ export default function Posta() {
       )}
     </div>
   );
-}
+};
+
+export default Api;

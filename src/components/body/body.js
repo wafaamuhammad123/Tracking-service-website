@@ -5,6 +5,7 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faBox } from '@fortawesome/free-solid-svg-icons';
 import { faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons';
 import { faShippingFast } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 
 import './body.css';
@@ -14,13 +15,14 @@ const Body = () => {
      
 
   return <body>
-<div style={{ display: 'flex', alignItems: 'center',marginLeft: '10%',
-  marginTop: '5%' }}>
+    
+<div style={{ display: 'flex', alignItems: 'center',
+ background: 'linear-gradient(to top, rgb(234, 246, 255), rgb(253, 254, 255))', marginBottom:'5%'}}>
     <div>
-      <h1 style={{   color: 'black',
+      <h1 style={{   color: 'black',marginLeft: '12%',
           fontWeight: 'bold',}}>Join A New Generation <br/> Of Logistics!</h1> <br/>
 <h4 style={{   color: '#797171;',
-          fontWeight: 'bold',}}>Redefining how you ship, track, collect, deliver all through <br/>
+          fontWeight: 'bold',marginLeft: '12%',}}>Redefining how you ship, track, collect, deliver all through <br/>
            innovative tech-solutions and efficient operations.
 </h4>
 <button className='button-43'>start now</button>
@@ -141,19 +143,24 @@ Learn More
   <p className='text'>
   Egypt’s #1 Shipping Partner For:
   </p>
-
   <div  style={{ display: 'flex',marginTop:'5%',marginBottom:'7%' }}>
+    <div>
+  <FontAwesomeIcon icon={faBriefcase} /> <br/>
   <p className='text1' style={{ flex: 1, marginRight: '20px' }}>
-    BusinessBosta can equip your logistic <br/> operations with efficient tools and <br/> innovative tech solutions —
+  
+    Business <br/> Bosta can equip your logistic <br/> operations with efficient tools and <br/> innovative tech solutions —
     dashboard,<br/> plugins, and API integrations.<br/>
     start with bosta
   </p>
+  </div>
+  <div>
+  <FontAwesomeIcon icon={faBriefcase} />
   <p style={{ flex: 1 }}>
-    Small & Medium BusinessWe ensure seamless delivery  <br/>operations for your small or mid-sized <br/>
+    Small & Medium Business <br/>We ensure seamless delivery  <br/>operations for your small or mid-sized <br/>
     hustle with our super-smooth mobile <br/> app. <br/>
     start with bosta
   </p>
-</div>
+</div> </div>
 <p className='text'>
 Trusted by top companies in the region
 
