@@ -42,7 +42,7 @@
   }
   @media screen and (max-width: 768px) {
     .btn--doar, .btn--doar2 {
-      width: 100%; /* Full width on small screens */
+      width: 70%; /* Full width on small screens */
     }
   }
   @media (max-width: 768px) {
@@ -51,9 +51,12 @@
     }
   
     .text-content {
-      width: 100%; /* Full width on smaller screens */
+      margin-left: 20px; /* Adjust margin as needed */
+      text-align: left;
     }
   }
+
+  
 
   .rhombus-image {
     width: 500px;
@@ -75,7 +78,7 @@
   .text-behind img{
     width: 150px;
     margin-left: 100px;
-    margin-top: 220px;
+    margin-top: 370px;
   }
 .text-behind p{
     font-size: 25px;
@@ -105,6 +108,13 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+@media only screen and (max-width: 768px) {
+  .text-behind {
+    display: none; /* Hide the entire div on screens less than or equal to 768px */
+  }
+}
+
   .box{
     position: relative;
     background-color: rgb(224, 241, 243);

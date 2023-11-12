@@ -15,7 +15,7 @@ const Body = () => {
      
 
   return <body>
-    
+    <div class='container0'>
 <div style={{ display: 'flex', alignItems: 'center',
  background: 'linear-gradient(to top, rgb(234, 246, 255), rgb(253, 254, 255))', marginBottom:'5%'}}>
     <div>
@@ -31,7 +31,7 @@ const Body = () => {
   height: 'auto',
   marginLeft: '18%' }} />
     
-    </div>
+    </div></div>
 
 
 {/* -------------------------------------------------------------------------------------------------------------- */}

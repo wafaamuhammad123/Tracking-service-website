@@ -5,7 +5,7 @@ import Footer from './components/footer/footer';
 import Body from './components/body/body';
 import Api from './components/api data/api';
 import TrackingDetails from './components/api data/trackingDetails';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Route, Switch, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,11 +15,6 @@ function App() {
         <Body />
         <Api />
         <Footer />
-        
-        <Switch>
-        <Route path="/track" exact> <TrackingDetails/>   </Route>
-      
-      </Switch>
      
       </div>
       </Router>
