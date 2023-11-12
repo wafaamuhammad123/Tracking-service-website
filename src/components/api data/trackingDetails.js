@@ -36,3 +36,26 @@
 //     </div>
 //   );
 // }
+
+
+// Home.js
+// Home.js
+import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
+const TrackingDetails = () => {
+  const history = useHistory();
+
+  const navigateToNewPage = () => {
+    history.push('/new');
+  };
+
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <Link to="/new">Go to New Page</Link>
+      <button onClick={navigateToNewPage}>Navigate to New Page</button>
+    </div>
+  );
+};
+
+export default TrackingDetails;

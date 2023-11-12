@@ -4,7 +4,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Body from './components/body/body';
 import Api from './components/api data/api';
-// import TrackingDetails from './components/api data/trackingDetails';
+import TrackingDetails from './components/api data/trackingDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +15,11 @@ function App() {
         <Body />
         <Api />
         <Footer />
+        
+        <Switch>
+        <Route path="/track" exact> <TrackingDetails/>   </Route>
+      
+      </Switch>
      
       </div>
       </Router>

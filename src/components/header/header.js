@@ -31,14 +31,8 @@ const Header = () => {
  
   <div class="container">
  
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
-      <img
-        src="Untitled.png"
-        alt="MDB Logo"
-        loading="lazy"
-       
-      />
-    </a>
+    <img src="/Untitled.png" alt="My Image" style={{ marginRight: '5px',width: '10%', height: 'auto' }} />
+
 
     <div class="collapse navbar-collapse" id="navbarButtonsExample">
 
@@ -93,7 +87,6 @@ const Header = () => {
                     <button className="tracking-button" onClick={handleFetchData}>
                         Fetch Data
                     </button>
-                    {/* Render headerData in the desired way */}
                     {headerData && (
                         <ul className="tracking-details">
                             <li>Tracking Number: {headerData.TrackingNumber}</li>
@@ -101,7 +94,7 @@ const Header = () => {
                             <li>Current Status: {headerData.CurrentStatus.state}</li>
                             <li>Promised Date: {headerData.PromisedDate}</li>
                             <li>Tracking URL: {headerData.TrackingURL}</li>
-                            {/* Render more properties here */}
+                         
                         </ul>
                     )}
                 </div>

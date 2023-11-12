@@ -99,7 +99,7 @@ const Body = () => {
   marginTop: '8%',
   fontWeight: '600'}}>Get to know our success but in numbers</p>
 
-    <div class="container">
+    <div class="container" style={{color:'white'}}>
 
      <div>
       <a href="" class="btn btn--doar">15,000 <br/> Merchants</a>
